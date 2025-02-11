@@ -876,10 +876,11 @@ section{
 
 .project-section ul li .project-content {
     width: 345px;
+    height: 100%;
     background-color: var(--bg-color);
+    position: relative;
     padding: 16px;
     display: flex;
-    position: relative;
     z-index: 1;
     flex-direction: column;
     gap: 20px;
@@ -914,7 +915,6 @@ section{
     color: var(--bg-color);
     border: var(--cta-color) 1px solid;
     border-radius: 4px;
-    font-size: 1.1rem;
     font-weight: 500;
     transition: all 0.3s ease-in;
 }
@@ -923,6 +923,7 @@ section{
     color: var(--cta-color);
 }
 .project-section ul li .project-content .visit-btn:hover a{
+    font-size: 1rem;
     color: var(--cta-color);
 }
 .project-section ul li .project-content .visit-btn a{
