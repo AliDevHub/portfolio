@@ -1,11 +1,3 @@
-
-const lenis = new Lenis();
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-
 // function headerScrolling (){
 //   const header = document.getElementById('header');
 //     let lastScrollPosition = 0;
@@ -31,6 +23,13 @@ requestAnimationFrame(raf);
 //     });
 // }
 // headerScrolling()
+
+const lenis = new Lenis();
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 let body = document.querySelector("body");
 let cursor = document.getElementById("cursor");
@@ -87,10 +86,10 @@ function heroSection() {
   }, 'b')
 
   tl.from(".contact-box-s", {
-    y: -30,
+    y: -20,
     opacity: 0,
     duration: 0.5,
-    delay: 0.5,
+    delay: 0.01,
     stagger: 0.1,
   })
 
@@ -130,17 +129,6 @@ function heroSection() {
 heroSection()
 
 
-function animate(selector, animationProps, triggerProps) {
-  gsap.from(selector, {
-    ...animationProps,
-    scrollTrigger: {
-      scroller: "body",
-      scrub: 3,
-      ...triggerProps,
-    },
-  });
-}
-
 function createTextAnimation(selector, trigger) {
   const element = document.querySelector(selector);
   let content = "";
@@ -157,39 +145,87 @@ function createTextAnimation(selector, trigger) {
     scrollTrigger: {
       trigger,
       start: "top 90%",
-      end: "top 60%",
+      end: "top 50%",
       scrub: 3,
     },
   });
 }
-
 
 createTextAnimation(".right .about p", ".right .about .animateText1");
 createTextAnimation(".right .experience p", ".right .experience .animateText2");
 createTextAnimation(".right .graduation p", ".right .graduation p");
 createTextAnimation(".right .intermediate p", ".right .intermediate p");
 
+
+
+
+
+
+
+function smallProjectSlider () {
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    "@0.75": {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    "@1.00": {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    "@1.50": {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+  },
+});
+}
+smallProjectSlider ()
+
 // Hero Animations
-animate(".about, .about p", { y: 100, opacity: 0, duration: 0.5, delay: 0.5 }, {
-  trigger: ".about-section .right .about",
-  start: "top 90%",
-  end: "top 60%",
-});
+// animate(".about, .about p", { y: 100, opacity: 0, duration: 0.5, delay: 0.5 }, {
+//   trigger: ".about-section .right .about",
+//   start: "top 90%",
+//   end: "top 60%",
+// });
 
-animate(".introduction, .introduction p", { y: 200, opacity: 0, duration: 0.5, stagger: 0.3 }, {
-  trigger: ".about-section .right .introduction",
-  start: "top 50%",
-  end: "top 40%",
-});
+// animate(".introduction, .introduction p", { y: 200, opacity: 0, duration: 0.5, stagger: 0.3 }, {
+//   trigger: ".about-section .right .introduction",
+//   start: "top 50%",
+//   end: "top 40%",
+// });
 
-// Education Animations
-animate(".education-expreience .subtitle, .education-expreience .educationTitle, .education-expreience .brief-intro",
-  { y: 100, opacity: 0, duration: 0.5, stagger: 0.3 }, {
-  trigger: ".about-section .right .education-expreience",
-  start: "top 90%",
-  end: "top 60%",
-});
-
+// // Education Animations
+// animate(".education-expreience .subtitle, .education-expreience .educationTitle, .education-expreience .brief-intro",
+//   { y: 100, opacity: 0, duration: 0.5, stagger: 0.3 }, {
+//   trigger: ".about-section .right .education-expreience",
+//   start: "top 90%",
+//   end: "top 60%",
+// });
 
 function Specializations (){
   gsap.from(".right .services ul li", {
@@ -243,50 +279,7 @@ function Skills (){
 //   }
 // })
 
-function smallProjectSlider () {
-  const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  breakpoints: {
-    "@0.00": {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    "@0.75": {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    "@1.00": {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    "@1.50": {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-  },
-  on: {
-    autoplayTimeLeft(s, time, progress) {
-      progressCircle.style.setProperty("--progress", 1 - progress);
-      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-  },
-});
-}
 
-smallProjectSlider ()
 
 // function cursorAnimation(){
 

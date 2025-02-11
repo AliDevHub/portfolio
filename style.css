@@ -16,6 +16,9 @@
     color: var(--bg-color);
 }
 
+
+  
+
 :root {
     --bg-color: #0C101C;
     --cta-color: #D7FB00;
@@ -1414,3 +1417,19 @@ footer .sec{
         transform: translate(-20%, 30%);
     }
 }
+
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bg-card);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--cta-color);
+    border-radius: 5px;
+  }
+  
