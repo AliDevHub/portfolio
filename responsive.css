@@ -197,9 +197,6 @@
         right: 0;
         top: 35px;
     }
-    #project{
-        display: none;
-    }
 
     .contact-section h2 {
         text-align: left;
@@ -717,9 +714,6 @@
     .contact-section .contact-content form .first_last_name{
         flex-direction: column;
     }
-
-
-
 
     footer {
         margin-top: 40px;
