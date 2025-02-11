@@ -190,33 +190,6 @@ animate(".education-expreience .subtitle, .education-expreience .educationTitle,
   end: "top 60%",
 });
 
-animate(".credential-education div", {
-  x: 50, opacity: 0, duration: 0.5, stagger: 0.5}, {
-    trigger: ".right .credential-education",
-    start: "top 80%",
-    end: "top 70%",
-  });
-
-animate(".credential-education-experience", { y: 100, opacity: 0, duration: 0.5 }, {
-  trigger: ".right .credential-education-experience",
-  start: "top 80%",
-  end: "top 65%",
-});
-
-// Specializations Animations
-animate(".right .services .subtitle, .services .brief-intro", { y: 100, opacity: 0, duration: 0.5, stagger: 0.5 }, {
-  trigger: ".right .services",
-  start: "top 85%",
-  end: "top 65%",
-});
-
-// Skills Animations
-animate(".right .Skills .subtitle, .Skills .brief-intro", { y: 100, opacity: 0, duration: 0.5, stagger: 0.4 }, {
-  trigger: ".right .Skills",
-  start: "top 75%",
-  end: "top 60%",
-});
-
 
 function Specializations (){
   gsap.from(".right .services ul li", {
