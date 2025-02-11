@@ -857,12 +857,13 @@ section{
     gap: 24px;
 }
 
-.project-section ul li{
-    max-width: 385px;
+.project-section ul .project{
+    width: 385px;
     background-color: var(--bg-card);
     padding-bottom: 20px;
     position: relative;
     border-radius: 8px;
+    overflow: hidden;
 }
 .project-section ul li .thumbnail-image{
     height: 225px;
@@ -928,6 +929,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--bg-color);
 }
 
 .project .d-flex{
