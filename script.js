@@ -44,11 +44,6 @@ body.addEventListener("mousemove", (dets) => {
   })
 })
 
-
-
-
-
-
 function navigation() {
   let tl = gsap.timeline();
 
@@ -168,17 +163,18 @@ function createTextAnimation(selector, trigger) {
   });
 }
 
+
+createTextAnimation(".right .about p", ".right .about .animateText1");
+createTextAnimation(".right .experience p", ".right .experience .animateText2");
+createTextAnimation(".right .graduation p", ".right .graduation p");
+createTextAnimation(".right .intermediate p", ".right .intermediate p");
+
 // Hero Animations
 animate(".about, .about p", { y: 100, opacity: 0, duration: 0.5, delay: 0.5 }, {
   trigger: ".about-section .right .about",
   start: "top 90%",
   end: "top 60%",
 });
-
-createTextAnimation(".right .about p", ".right .about .animateText1");
-createTextAnimation(".right .experience p", ".right .experience .animateText2");
-createTextAnimation(".right .graduation p", ".right .graduation p");
-createTextAnimation(".right .intermediate p", ".right .intermediate p");
 
 animate(".introduction, .introduction p", { y: 200, opacity: 0, duration: 0.5, stagger: 0.3 }, {
   trigger: ".about-section .right .introduction",
@@ -225,32 +221,30 @@ animate(".right .Skills .subtitle, .Skills .brief-intro", { y: 100, opacity: 0, 
 function Specializations (){
   gsap.from(".right .services ul li", {
   y: 100,
-  opacity: 0,
   duration: 0.5,
   delay: 0.5,
-  stagger: 0.5,
+  stagger: 0.1,
   scrollTrigger: {
-    trigger: ".right .services ul",
+    trigger: ".right .services",
     scroller: "body",
     start: "top 80%",
     end: "top 70%",
     // markers: true,
-    scrub: 1,
+    scrub: 3,
   },
   });
 }
-Specializations ()
+// Specializations ()
 
 function Skills (){
   gsap.from(".right .Skills ul li", {
   y: 150,
   x: 50,
-  opacity: 0,
   duration: 0.5,
   delay: 0.5,
-  stagger: 0.5,
+  stagger: 0.3,
   scrollTrigger: {
-    trigger: ".right .Skills ul",
+    trigger: ".right .Skills",
     scroller: "body",
     start: "top 70%",
     end: "top 40%",
@@ -259,24 +253,25 @@ function Skills (){
   },
 });
 }
-Skills ()
+// Skills ()
 
-gsap.to("#project h6",{
-  transform: "translateX(-350%)",
-  scrollTrigger:{
-      trigger:"#project",
-      scroller:"body",
-      start: "top 10%",
-      end:"top 100%",
-      duration: 1,
-      delay: 0.5,
-      scrub: 3,
-      // markers: true,
-      pin:true
-  }
-})
+// gsap.to("#project h6",{
+//   transform: "translateX(-350%)",
+//   scrollTrigger:{
+//       trigger:"#project",
+//       scroller:"body",
+//       start: "top 10%",
+//       end:"top 100%",
+//       duration: 1,
+//       delay: 0.5,
+//       scrub: 3,
+//       // markers: true,
+//       pin:true
+//   }
+// })
 
-const progressCircle = document.querySelector(".autoplay-progress svg");
+function smallProjectSlider () {
+  const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
@@ -316,7 +311,9 @@ var swiper = new Swiper(".mySwiper", {
     }
   },
 });
+}
 
+smallProjectSlider ()
 
 // function cursorAnimation(){
 
