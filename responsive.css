@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     section {
-        padding: 40px 20px;
+        padding: 30px 24px;
     }
 
     #header {
@@ -21,41 +21,11 @@
         width: 80%;
     }
 
-    #about-box {
-        width: 100%;
-    }
-
-    .hero-section .about-box{
-        flex-direction: column;
-        height: 100%;
-        gap: 10px;
-        padding: 30px;
-    }
-    .infos .info-icon {
-        right: -5px;
-    }
-    .hero-section .about-box .infos p {
-        margin-bottom: 10px;
-    }
-
-    .more-about {
-        width: 100%;
-    }
-    .moreAbout-project {
-        gap: 16px;
-    }    
-    .moreAbout-project .more-details{
-        width: 100%;
-        height: auto;
-    }
-    .signature-image img {
-        margin: 0;
-    }
+    .hero-section  {
+        grid-template-columns: 1fr
+    } 
     .infos h5 {
         margin: 0;
-    }
-    .contact-box-s {
-        width: 100%;
     }
     .hero-section .contact-box h3 {
         font-size: 2rem;
@@ -126,6 +96,7 @@
     .right .services .service-item{
         width: 48%;
         margin-top: 0;
+        border-radius: 20px;
     }
     .right .services .service-item:last-child{
         flex-grow: 1;
@@ -179,15 +150,15 @@
         margin-bottom: 1rem;
     }
 
-    .project-section ul .project{
-        width: 47%;
+    .project-section .big-projects {
+        grid-template-columns: 1fr 1fr;
     }
     .project-section ul li .project-content{
         width: 90%;
         margin: -20px auto 0;
     }
     .project-section ul li .thumbnail-image{
-        height: auto;
+        height: 200px;
     }
 
     .contact-section h2 {
@@ -250,13 +221,13 @@
     }
 
   }
-@media (max-width: 580px) {
+ @media (max-width: 580px) {
     section {
-        padding: 40px 20px;
+        padding: 16px;
     }
 
     #header {
-        padding: 20px;
+        padding: 8px 20px 8px;
     }
     .btn.letsTalk {
         display: none;
@@ -270,37 +241,21 @@
         padding: 10px;
     }
     header nav .logo img {
-        width: 80%;
+        width: 50%;
     }
-
-    #about-box {
-        width: 100%;
-    }
-
     .hero-section .about-box{
         flex-direction: column;
         height: 100%;
         gap: 10px;
         padding: 30px;
     }
-    .infos .info-icon {
-        right: -5px;
-    }
-    .hero-section .about-box .infos p {
-        margin-bottom: 24px;
-    }
-
-    .more-about {
-        width: 100%;
+    .hero-section .about-box .profile {
+        height: 200px;
     }
     .moreAbout-project {
         gap: 16px;
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }    
-    .moreAbout-project .more-details{
-        width: 100%;
-        height: auto;
-    }
     .signature-image{
         display: flex;
         align-items: center;
@@ -334,6 +289,9 @@
     }
     .box-2 .social-media a:first-child{
         padding-right: 0px;
+    }
+    .text-with-image {
+        display: none;
     }
 
 
@@ -404,8 +362,13 @@
     .Skills .skills .skill-item i{
         font-size: 1.2rem;
     }
-    .right .services .service-item{
+    .right .services .service-item {
         width: 100%;
+        padding: 16px;
+        border-radius: 16px;
+    }
+    .swiper{
+        padding-top: 16px;
     }
     .about-section .right .box {
         margin-bottom: 60px;
@@ -428,17 +391,29 @@
     }
     #content-part .paragraph p {
         margin-bottom: 1rem;
+    } 
+
+    .project-section .big-projects {
+        grid-template-columns: 1fr;
     }
 
     .project-section ul .project{
-        width: 100%;
+        border: 1px solid var(--bg-color);
     }
     .project-section ul li .project-content{
         width: 90%;
         margin: -20px auto 0;
     }
     .project-section ul li .thumbnail-image{
-        height: auto;
+        height: 180px;
+    }
+
+    .project-section ul li .project-content p{
+        font-size: 0.9rem;
+    }
+
+    .small-projec li{
+        border-radius: 8px;
     }
 
     .contact-section h2 {
@@ -485,220 +460,4 @@
         padding: 12px;
     }
 
-  }
-@media (max-width: 375px) {
-    section {
-        padding: 40px 20px;
-    }
-
-    #header {
-        padding: 20px;
-    }
-    .btn.letsTalk {
-        display: none;
-    }
-    header nav .navigations {
-        display: none;
-    }
-    .menu {
-        display: block;
-        color: var(--text-color);
-        padding: 10px;
-    }
-    header nav .logo img {
-        width: 80%;
-    }
-
-    #about-box {
-        width: 100%;
-    }
-
-    .hero-section .about-box{
-        flex-direction: column;
-        height: 100%;
-        gap: 10px;
-        padding: 30px;
-    }
-    .infos .info-icon {
-        right: -5px;
-    }
-    .hero-section .about-box .infos p {
-        margin-bottom: 10px;
-    }
-
-    .more-about {
-        width: 100%;
-    }
-    .moreAbout-project {
-        gap: 16px;
-        flex-direction: column;
-    }    
-    .moreAbout-project .more-details{
-        width: 100%;
-        height: auto;
-    }
-    .signature-image img {
-        margin: 0;
-    }
-    .infos h5 {
-        margin: 0;
-    }
-    .contact-box-s {
-        width: 100%;
-    }
-    .hero-section .contact-box h3 {
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: 500;
-    }
-    .social-media .icon-box {
-        width: 50px;
-        height: 50px;
-    }
-    .box-2 .social-media {
-        padding: 14px;
-        gap: 0px;
-    }
-    .box-2 .social-media a{
-        padding-right: 16px;
-    }
-    .box-2 .social-media a:first-child{
-        padding-right: 0px;
-    }
-
-
-    .sticky-section {
-        flex-direction: column;
-    }
-    .sticky-box {
-        position: static;
-        min-width: 100%;
-    }
-
-    .about-section .right{
-        width: 100%;
-    }
-    .right h1 {
-        font-size: 2.6rem;
-        margin-bottom: 20px;
-    }
-    .right .introduction p {
-        margin-bottom: 50px;
-        padding: 0;
-        text-align: justify;
-    }
-
-    .right .brief-intro {
-        font-size: 2.5rem;
-    }
-    .right .animateText1 {
-        padding: 0;
-    }
-
-    .right .credential-education .graduation, .credential-education .intermediate, .credential-education-experience .experience{
-        padding-left: 30px;
-        padding-bottom: 0px;
-    }
-    .right .credential-education h6, .credential-education-experience h6{
-        padding: 8px 0 0 0 ;
-    }
-    .right .credential-education .graduation p, .credential-education .intermediate p, .credential-education-experience .experience p{
-        padding-top: 8px;
-        padding-right: 0;
-    }
-
-    .right .services .service-item p {
-        padding-right: 0px;
-        font-size: 0.9rem;
-    }
-    .about-section .right .Skills {
-        margin-top: 0px;
-    }
-    .Skills h4 {
-        margin-top: 0px;
-    }
-    .Skills h4:last-child {
-        display: none;
-    }
-
-    .Skills .skills{
-        gap: 24px;
-        padding-top: 20px;
-        width: 100%;
-    }
-    .Skills .skills .skill-item{
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-    }
-    .Skills .skills .skill-item i{
-        font-size: 1.2rem;
-    }
-    .about-section .right .box {
-        margin-bottom: 60px;
-    }
-
-    .pin-spacer{
-        margin: 0 !important;
-    }
-    #content-part {
-        flex-direction: column;
-        margin: 2rem 0;
-    }
-    #content-part .heading h1 {
-        max-width: 100%;
-        font-size: 2.1rem;
-    }
-    #content-part .paragraph {
-        max-width: 100%;
-        padding-top: 24px;
-    }
-    #content-part .paragraph p {
-        margin-bottom: 1rem;
-    }
-    .project-section ul li .project-content{
-        margin: -30px auto 0;
-    }
-
-    .contact-section h2 {
-        text-align: left;
-        font-size: 2.5rem;
-    }
-    .contact-section p {
-        text-align: left;
-    }
-    .contact-section .contact-content{
-        flex-direction: column;
-        height: 100%;
-        padding: 20px 20px 30px;
-    }
-    .contact-section .contact-content .image{
-        width: 100%;
-        height: 190px;
-    }
-    .contact-section .contact-content form{
-        width: 100%;
-        padding: 0;
-    }
-    .contact-section .contact-content form h2 {
-        font-size: 2.1rem;
-        line-height: 1.2;
-    }
-    .contact-section .contact-content form p {
-        margin-bottom: 30px;
-    }
-    .contact-section .contact-content form .first_last_name{
-        flex-direction: column;
-    }
-
-    footer {
-        margin-top: 40px;
-    }
-    footer .footer_logo img {
-        width: 35%;
-    }
-    footer ul li a {
-        padding: 12px;
-    }
-
-  }
+}

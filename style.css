@@ -20,12 +20,13 @@
   
 
 :root {
-    --bg-color: #0C101C;
-    --cta-color: #D7FB00;
+    --black: #000;
+    --bg-color: #09090d;
+    --cta-color: #0b73f3;
     --heading-color: #DEDFE8;
     --text-color: #DEDFE8;
-    --border-color: #1B202C;
-    --bg-card: #161B27;
+    --border-color: #1b202c;
+    --bg-card: #08090e;
     --white-color: #ffffff;
     --font-heading: "Source Sans 3", serif;
 }
@@ -101,8 +102,9 @@ header nav{
     width: 100%;
 }
 
-header nav .logo img{
-    width: 60%;
+header nav .logo h2 span{
+    color: var(--cta-color);
+    font-size: 2.5rem;
 }
 
 header nav .navigations{
@@ -117,7 +119,7 @@ header nav .navigations li{
 }
 
 header nav .navigations li a{
-    padding: 0.7rem 1.2rem;
+    padding: 0.65rem 1.5rem;
     font-family: inherit;
     font-size: 1.05rem;
     color: var(--text-color);
@@ -145,11 +147,11 @@ header nav .navigations li:hover::after{
     border-radius: 0;
 }
 header nav .navigations li:hover a{
-    color: var(--text-colorr);
+    color: var(--white-color);
 }
 
 .btn.letsTalk{
-    width: 135px;
+    width: 145px;
 }
 .btn.letsTalk ul li{
     background-color: var(--bg-card);
@@ -179,22 +181,26 @@ section{
 }
 
 .hero-section{
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.more-about {
+    display: grid;
     gap: 20px;
-    flex-wrap: wrap;
-    /* margin-top: 30px; */
 }
-#about-box{
-    width: 49%;
+.hero_card {
+    position: relative;
 }
+
 .hero-section .about-box{
-    height: 325px;
-    padding: 50px 46px;
+    padding: 46px;
     border-radius: 30px;
     border: 1px solid var(--border-color);
     background-color: var(--bg-card); 
     position: relative;
-    gap: 30px;
+    gap: 20px;
     transition: 0.3s ease-in;
 }
 .hero-section .about-box:hover{
@@ -205,7 +211,7 @@ section{
     height: 225px;
     overflow: hidden;
     border-radius: 30px 0 30px 0;
-    background: linear-gradient(90deg, #5b78f6 -15%, #C2EBFF 58%, #5b78f6 97%)
+    /* background: linear-gradient(90deg, #5b78f6 -15%, #C2EBFF 58%, #5b78f6 97%) */
 }
 .hero-section .about-box .profile img{
     height: 100%;
@@ -216,7 +222,7 @@ section{
 .hero-section .about-box .infos{
     padding-top: 20px;
     position: relative;
-    height: 100%;
+    width: 100%;
 }
 .hero-section .about-box .infos h5{
     opacity: 0.5;
@@ -239,43 +245,36 @@ section{
     letter-spacing: 0.3px;
     margin: 0;
 }
-.infos .info-icon{
+.icon_box .info-icon{
     position: absolute;
-    bottom: -20px;
-    right: -16px;
+    bottom: 20px;
+    right: 20px;
     font-size: 32px;
     color: var(--text-color);
     opacity: 0.5;
     transition: 0.3s ease-in;
 }
 
-.hero-section .about-box:hover .infos .info-icon{
+.icon_box:hover .info-icon{
     opacity: 1;
     rotate: -45deg;
     transform: scale(1.1);
     color: var(--cta-color);
 }
 
-.more-about{
-    width: 49%;
-}
 
-
-.text-with-image {
-    margin-top: 20px;
-}
 .text-with-image .move{
+    overflow: hidden;
     padding: 16px 0;
     border-radius: 50px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    overflow: hidden;
+    gap: 20px;
 }
 
 .text-with-image .move .marque{
     flex-shrink: 0;
     gap: 20px;
-    margin-left: 20px;
     transform: translateX(-100%);
 }
 
@@ -299,50 +298,35 @@ section{
     opacity: 0.5;
 }
 
-.moreAbout-project{
-    gap: 30px;
+.moreAbout-project {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
 }
 .moreAbout-project .more-details{
-    min-width: 275px;
-    height: 250px;
+    /* height: 250px; */
     padding: 24px;
     border-radius: 30px;
     background-color: var(--bg-card);
     border:  1px solid var(--border-color);
     transition: 0.3s ease-in;
+    position: relative;
     overflow: hidden;
 }
 .moreAbout-project .more-details:hover{
     border: 1px solid var(--cta-color);
 }
-.signature-image img {
-    width: 100%;
-    display: block;
-    margin: auto auto 16px auto;
+.signature-image{
+    display: grid;
+    place-items: center;
 }
+
 .infos h5 {
     font-size: 12px;
     opacity: 0.5;
     margin-bottom: 12px;
 }
-.infos h2 {
-    font-size: 1.5rem;
-}
-.more-details .info-icon {
-    font-size: 32px;
-    color: var(--text-color);
-    opacity: 0.5;
-    transition: 0.3s ease-in;
-}
-.hero-section .more-details:hover .info-icon{
-    opacity: 1;
-    rotate: -45deg;
-    transform: scale(1.1);
-    color: var(--cta-color);
-}
-.contact-box-s{
-    width: 49%;
-}
+
 
 .hero-section .box-2{
     padding: 24px !important;
@@ -355,7 +339,6 @@ section{
     border: 1px solid var(--border-color);
     background-color: var(--bg-card); 
     position: relative;
-    gap: 30px;
     transition: 0.3s ease-in;
 }
 .hero-section .contact-box:hover{
@@ -385,7 +368,7 @@ section{
 }
 .social-media{
     padding: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border: 1px solid var(--border-color);
     border-radius: 24px;
     gap: 16px;
@@ -427,7 +410,7 @@ section{
     width: 100%;
     max-width: 35%;
     height: 601px;
-    background-color: var(--bg-color); 
+    background-color: transparent; 
     position: sticky;
     top: 10%;
     z-index: 10;
@@ -437,7 +420,8 @@ section{
     padding: 30px;
     border-radius: 30px;
     border: 1px solid var(--border-color);
-    background-color: var(--bg-card);
+    background-color: var(--bg-color);
+    box-shadow: 10px 10px 20px rgba(251, 251, 251, 0.039), -1px -1px 0px var(--cta-color);
 }
 .about-section .profile .top-heading h2{
     font-weight: 600;
@@ -465,7 +449,7 @@ section{
     border-radius: 20px;
     overflow: hidden;
     margin: 40px auto 50px;
-    background-color: #daff05;
+    background-color: var(--cta-color);
 }
 .about-section .profile .profile-image img{
     width: 100%;
@@ -481,7 +465,7 @@ section{
     font-size: 1.2rem;
 }
 .about-section .profile .emailAddress h4{
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .about-section .profile .copyRight{
@@ -516,9 +500,9 @@ section{
 .about-section .profile .email-btn a{
     display: block;
     width: 100%;
-    padding: 14px;
-    background-color: var(--cta-color);
-    color: var(--bg-color);
+    padding: 12px;
+    background-color: var(--bg-card);
+    color: var(--cta-color);
     border: var(--cta-color) 1px solid;
     border-radius: 30px;
     font-size: 1.1rem;
@@ -530,8 +514,8 @@ section{
     margin-right: 8px;
 }
 .about-section .profile .email-btn a:hover{
-    background-color: transparent;
-    color: var(--cta-color);
+    background-color: var(--cta-color);
+    color: var(--white-color);
 }
 
 
@@ -834,7 +818,7 @@ section{
     top: -20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--text-color);
+    color: var(--cta-color);
     font-size: 0.8rem;
     width: max-content;
     font-weight: 600;
@@ -852,17 +836,18 @@ section{
 
 
 .project-section .big-projects{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
 }
 
 .project-section ul .project{
-    width: 385px;
+    width: 100%;
     background-color: var(--bg-card);
     padding-bottom: 20px;
     position: relative;
     border-radius: 8px;
+    border: 1px solid var(--cta-color);
     overflow: hidden;
 }
 .project-section ul li .thumbnail-image{
@@ -906,31 +891,30 @@ section{
     color: var(--text-color);
 }
 
-.project-section ul li .project-content .visit-btn {
+
+.project-section ul li .project-content .visit-btn a{
     display: block;
     width: 100%;
     height: 48px;
     padding: 14px;
-    background-color: var(--cta-color);
-    color: var(--bg-color);
+    background-color: var(--bg-color);
+    color: var(--cta-color);
     border: var(--cta-color) 1px solid;
     border-radius: 4px;
     font-weight: 500;
     transition: all 0.3s ease-in;
 }
-.project-section ul li .project-content .visit-btn:hover {
-    background-color: transparent;
-    color: var(--cta-color);
-}
-.project-section ul li .project-content .visit-btn:hover a{
+
+.project-section ul li .project-content .visit-btn a:hover{
+    background-color: var(--cta-color);
     font-size: 1rem;
-    color: var(--cta-color);
+    color: var(--white-color);
 }
 .project-section ul li .project-content .visit-btn a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--bg-color);
+    color: var(--white-color);
 }
 
 .project .d-flex{
@@ -1042,6 +1026,10 @@ section{
     border-radius: 20px;
     padding: 10px 10px 16px;
     border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+.small-projec li:hover{
+    border: 1px solid var(--cta-color);
 }
 .small-projec li .sm-thumb{
     width: 100%;
