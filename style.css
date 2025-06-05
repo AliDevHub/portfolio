@@ -20,9 +20,14 @@
   
 
 :root {
+<<<<<<< HEAD
     --black: #000;
     --bg-color: #09090d;
     --cta-color: #0b73f3;
+=======
+    --bg-color: #0C101C;
+    --cta-color: #038e00;
+>>>>>>> afb00c853a418db123ae2d89edf7d9b125f7e9d9
     --heading-color: #DEDFE8;
     --text-color: #DEDFE8;
     --border-color: #1b202c;
